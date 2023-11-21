@@ -31,8 +31,7 @@ def main():
         ret, frame = cap.read()
 
         if not ret:
-            print("Failed to grab frame")
-            break
+            continue
 
         results = process_frame(frame, model)
         frame = draw_detections(frame, results)
